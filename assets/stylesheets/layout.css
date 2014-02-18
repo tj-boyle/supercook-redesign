@@ -1,0 +1,211 @@
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.6.1
+ */
+/* SITE STYLES
+ * ------------------------------------------------ */
+/* Add site styles here */
+/* For example: a { color: #000; } */
+/* Typography (baseline corrections)
+================================================== */
+/* line 24, ../sass/layout.scss */
+h1 {
+  line-height: 49px;
+  margin-bottom: 14px;
+}
+
+/* line 25, ../sass/layout.scss */
+h2 {
+  line-height: 42px;
+  margin-bottom: 7px;
+}
+
+/* line 26, ../sass/layout.scss */
+h3 {
+  line-height: 35px;
+  margin-bottom: 7px;
+}
+
+/* line 27, ../sass/layout.scss */
+h4 {
+  line-height: 28px;
+  margin-bottom: 7px;
+}
+
+/* line 28, ../sass/layout.scss */
+h5 {
+  line-height: 21px;
+}
+
+/* line 30, ../sass/layout.scss */
+p {
+  margin: 0 0 21px 0;
+}
+
+/* line 31, ../sass/layout.scss */
+p.lead {
+  line-height: 28px;
+}
+
+/*blockquotes */
+/* line 34, ../sass/layout.scss */
+blockquote, blockquote p {
+  line-height: 21px;
+}
+
+/* line 35, ../sass/layout.scss */
+blockquote {
+  margin: 0 0 21px;
+  padding: 7px 28px 0 19px;
+}
+
+/* line 37, ../sass/layout.scss */
+hr {
+  margin: 14px 0 28px;
+}
+
+/* Lists (baseline corrections)
+================================================== */
+/* line 41, ../sass/layout.scss */
+ul, ol {
+  margin-bottom: 21px;
+}
+
+/* line 42, ../sass/layout.scss */
+li {
+  line-height: 21px;
+  margin-bottom: 14px;
+}
+
+/* Buttons (baseline corrections)
+================================================== */
+/* line 46, ../sass/layout.scss */
+button {
+  border: none;
+  text-shadow: none !important;
+}
+
+/* line 50, ../sass/layout.scss */
+button:hover {
+  border: none;
+  color: white;
+  text-shadow: none !important;
+}
+
+/* Stylization */
+/* line 57, ../sass/layout.scss */
+body {
+  background-color: #EFEFEF;
+}
+
+/* line 61, ../sass/layout.scss */
+header {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  background-color: #6cc85f;
+  height: 77px;
+}
+/* line 68, ../sass/layout.scss */
+header .container {
+  position: relative;
+  top: 14px;
+}
+/* line 72, ../sass/layout.scss */
+header h2 {
+  position: relative;
+  font-weight: 800;
+  color: white;
+  top: 4px;
+}
+/* line 79, ../sass/layout.scss */
+header span {
+  font-weight: 400;
+}
+/* line 83, ../sass/layout.scss */
+header .button-wrapper {
+  text-align: right;
+}
+/* line 87, ../sass/layout.scss */
+header button {
+  background: #e35920;
+  font-weight: 400;
+  border-radius: 4px;
+  border-bottom: 3px solid #db481f;
+  color: white;
+  width: 105px;
+  height: 35px;
+  margin: 7px 0 0 7px;
+  font-size: 14px;
+}
+/* line 98, ../sass/layout.scss */
+header button:hover {
+  background: #DB481F;
+}
+
+/* line 104, ../sass/layout.scss */
+.body {
+  position: relative;
+  top: 105px;
+}
+/* line 109, ../sass/layout.scss */
+.body aside input {
+  -webkit-box-shadow: #93a29e 1px 1px 2px 0px inset;
+  -moz-box-shadow: #93a29e 1px 1px 2px 0px inset;
+  box-shadow: #93a29e 1px 1px 2px 0px inset;
+  background-color: #E8E7E5;
+  padding-left: 21px;
+}
+/* line 115, ../sass/layout.scss */
+.body aside .ingred li {
+  margin: 0 0 7px;
+  padding-left: 7px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 123, ../sass/layout.scss */
+.body aside .ingred li:before {
+  content: url("../images/x.png");
+  position: relative;
+  top: 2px;
+  left: -7px;
+}
+
+/* PAGE STYLES
+ * ------------------------------------------------ */
+/* Add page styles here */
+/* For example: .page-home { background: rgba(0, 0, 0, 0.4); } */
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  /* add code here */
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /* add code here */
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* add code here */
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* add code here */
+}
