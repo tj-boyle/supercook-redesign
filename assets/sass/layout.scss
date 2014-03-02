@@ -13,154 +13,245 @@
 @import "vars"; // import _global_variables.scss
 @import "mixins"; // import _mixins.scss
 @import "compass/css3"; // import compass CSS3 mixins
+@import "compass/css3/user-interface";
+
+/* TYPOGRAPHY (Baseline Corrections)
+================================================== */
+h1{ line-height: 49px; margin-bottom: 14px;}
+h2{ line-height: 42px; margin-bottom: 7px;}
+h3{ line-height: 35px; margin-bottom: 7px;}
+h4{ line-height: 28px; margin-bottom: 7px;}
+h5{ line-height: 21px;}
+
+p{ margin: 0 0 21px 0;}
+p.lead{ line-height: 28px;}
+
+
+/* BLOCKQUOTES (Baseline Corrections)
+================================================== */
+blockquote, blockquote p{line-height: 21px;}
+blockquote {margin: 0 0 21px; padding: 7px 28px 0 19px;}
+
+hr{ margin: 14px 0 28px;}
+
+/* LISTS (Baseline Corrections)
+================================================== */
+ul, ol {margin-bottom: 21px;}
+li { line-height: 21px; margin-bottom: 14px;}
+
+.row{
+    margin-bottom: 21px;
+}
+
+/* BUTTONS (Baseline Corrections)
+================================================== */
+button{
+    border: none;
+    text-shadow: none !important;
+}
+button:hover{
+    border: none;
+    color: white;
+    text-shadow: none !important;
+
+}
+
 
 /* SITE STYLES
  * ------------------------------------------------ */
-/* Add site styles here */
-/* For example: a { color: #000; } */
-
-/* Typography (baseline corrections)
-================================================== */
-	h1{ line-height: 49px; margin-bottom: 14px;}
-	h2{ line-height: 42px; margin-bottom: 7px;}
-	h3{ line-height: 35px; margin-bottom: 7px;}
-	h4{ line-height: 28px; margin-bottom: 7px;}
-	h5{ line-height: 21px;}
-
-	p{ margin: 0 0 21px 0;}
-	p.lead{ line-height: 28px;}
-
-/*blockquotes */
-	blockquote, blockquote p{line-height: 21px;}
-	blockquote {margin: 0 0 21px; padding: 7px 28px 0 19px;}
-
-	hr{ margin: 14px 0 28px;}
-
-/* Lists (baseline corrections)
-================================================== */
-	ul, ol {margin-bottom: 21px;}
-	li { line-height: 21px; margin-bottom: 14px;}
-
-/* Buttons (baseline corrections)
-================================================== */
-	button{
-		border: none;
-		text-shadow: none !important;
-	}
-	button:hover{
-		border: none;
-		color: white;
-		text-shadow: none !important;
-	}
-
-/* Stylization */
-body{
-	background-color: #EFEFEF;
+*, *:before, *:after{
+    @include box-sizing(border-box);
 }
 
-header{
-	position: fixed;
-	width: 100%;
-	margin: auto;
-	background-color: $green;
-	height: 77px;
-	
-	.container{
-		position: relative;
-		top: 14px;
-	}
-	h2{
-		position: relative;
-		font-weight: 800;
-		color: white;
-		top: 4px;
-	}
-
-	span{
-		font-weight: 400;
-	}
-
-	.button-wrapper{
-		text-align: right;
-	}
-
-	button{
-		background: $orange;
-		font-weight: 400;
-		border-radius: 4px;
-		border-bottom: $bb #DB481F;
-		color: white;
-		width: 105px;
-		height: 35px;
-		margin: 7px 0 0 7px;
-		font-size: 14px;
-	}
-	button:hover{
-		background: #DB481F;
-	}
+body {
+    background-color: #EFEFEF;
+    font-family: $fontFamily;
 }
 
-
-.body{
-	position: relative;
-	top: 105px;
-
-	aside{
-		input{
-			@include box-shadow($grey 1px 1px 2px 0px inset);
-			background-color: #E8E7E5;
-			padding-left: 21px;
-		}
-
-		.ingred li{
-			margin: 0 0 7px;
-			padding-left: 7px;
-			width: 100%;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		.ingred li:before{
-			content: url('../images/x.png');
-			position: relative;
-			top: 2px;
-			left: -7px;
-		}
-	}
+.left{
+    float: left !important;
 }
-/* PAGE STYLES
- * ------------------------------------------------ */
-/* Add page styles here */
-/* For example: .page-home { background: rgba(0, 0, 0, 0.4); } */
+
+.right{
+    float: right !important;
+}
+
+button {
+    font-weight: 400;
+    border-radius: 4px;
+    color: white;
+    padding: 0 14px;
+    margin-left: 0px;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: $orange-border;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    background-color: #6cc85f;
+    height: 77px;
+    z-index: 1; 
+        
+    .container {
+        position: relative;
+        padding-top: 14px;
+    }
+
+    
+    h2 {
+        display: inline;
+        position: relative;
+        font-weight: 800;
+        color: white;
+        top: 4px;
+        font-family: "Open Sans", sans-serif !important;
+    }
+    
+    span {
+        font-weight: 400;
+    }
+    
+    .button-wrapper {
+        text-align: right;        
+    }
+    
+    button{
+        height: 35px;
+        background: $orange;
+        @include box-shadow($orange-border 0px -3px 2px 0px inset);
+        
+    }
+}
+
+.body {
+    position: relative;
+    top: 105px;
+    z-index: 0;
+    
+    .card{
+        background-color: white;
+        border-radius: 4px;
+        border-bottom: 3px solid #db481f;
+        padding: 7px;
+    } 
+
+    aside{
+
+        .form-border{
+            padding-bottom: 7px;
+            margin-bottom: 7px;
+            border-bottom: 1px solid grey;
+        }        
+
+        input {
+            @include box-shadow($grey-border 1px 1px 2px 0px inset);
+            background-color: $grey;
+            width: 100%;
+            margin: 0;
+        }
+        
+        ul{
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        li {
+            margin: 0 0 7px;
+            padding-left: 7px;
+            position: relative;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        li:before {
+            // content: url("../images/x.png");
+            content: "x";
+            color: $orange;
+            position: relative;
+            font-weight: 600;
+            left: -7px;
+        }
+
+        a{
+            color: #0022bb;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .meal{
+
+        button{
+            height: 28px;
+            background: $grey-border;
+            @include box-shadow($grey-butt-border 0px -3px 2px 0px inset);
+        }
+
+        button:hover{
+            background: $grey-butt-border;
+        }
+
+        button.current{
+            background: $green;            
+            @include box-shadow($green-border 0px -3px 2px 0px inset);
+        }
+
+        button.current:hover{
+            background: $green-border;
+        }
+
+    }
+
+    .recipes{
+        margin-top: 7px;
+
+        .recipe{
+
+        }
+    }
+}
 
 /* MEDIA QUERIES
  * ------------------------------------------------ */
 /* Otherwise known as custom responsive code! Write it here! */
 @media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
-	/* add code here */
+    /* add code here */
 }
 
 /* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
 @media only screen and (max-width: $baseWidthMQ - 1) {
-	/* add code here */
+    /* add code here */
 }
 
 /* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
 @media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
-	/* add code here */
+    /* add code here */
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: $tabletWidth - 1) {
-	/* add code here */
+    /* add code here */
+    header{
+        h2{
+            font-size: 28px;
+        }
+    }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
-	/* add code here */
+    /* add code here */
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-	/* add code here */
+    /* add code here */
 }
