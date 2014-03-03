@@ -78,7 +78,7 @@ body {
 
 button {
     font-weight: 400;
-    border-radius: 4px;
+    @include border-radius(4px);
     color: white;
     padding: 0 14px;
     margin-left: 0px;
@@ -136,12 +136,12 @@ header {
     
     .card{
         background-color: white;
-        border-radius: 4px;
+        @include border-radius(4px);
         border-bottom: 3px solid #db481f;
-        padding: 7px;
     } 
 
     aside{
+        padding: 7px;   
 
         .form-border{
             padding-bottom: 7px;
@@ -206,15 +206,57 @@ header {
 
         button.current:hover{
             background: $green-border;
+        
         }
-
     }
 
     .recipes{
-        margin-top: 7px;
+        margin-top: 14px;
 
         .recipe{
+            margin-bottom: 14px;
+            
+            img{
+                @include border-top-radius(4px);
+            }
 
+            h6{
+                position: relative;
+                padding-left: 7px;
+                top: -4px;
+                color: $orange-border;
+            }
+            .wrapper{ 
+                height: 46px;
+                margin-bottom: 14px;
+
+                div{
+                    background-size: 32px 32px;
+                    background-position: 50% 0%;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    float:left; 
+                    width:30%; 
+                    height:100%;
+
+                    p{
+                        position: relative;
+                        top: 68%;
+                        text-align: center;
+                    }
+                }
+    
+                .iIcon{
+                    background-image: url('../images/basket.png');
+                }
+                .pIcon{
+                    background-image: url('../images/pot-01.png'); 
+                    margin:0 5%;               
+                }
+                .cIcon{
+                    background-image: url('../images/time.png');                
+                }
+            }
         }
     }
 }

@@ -132,6 +132,10 @@ body {
 /* line 79, ../sass/layout.scss */
 button {
   font-weight: 400;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   color: white;
   padding: 0 14px;
@@ -194,8 +198,15 @@ header button {
 /* line 137, ../sass/layout.scss */
 .body .card {
   background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   border-bottom: 3px solid #db481f;
+}
+/* line 143, ../sass/layout.scss */
+.body aside {
   padding: 7px;
 }
 /* line 146, ../sass/layout.scss */
@@ -267,7 +278,61 @@ header button {
 }
 /* line 213, ../sass/layout.scss */
 .body .recipes {
-  margin-top: 7px;
+  margin-top: 14px;
+}
+/* line 216, ../sass/layout.scss */
+.body .recipes .recipe {
+  margin-bottom: 14px;
+}
+/* line 219, ../sass/layout.scss */
+.body .recipes .recipe img {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 223, ../sass/layout.scss */
+.body .recipes .recipe h6 {
+  position: relative;
+  padding-left: 7px;
+  top: -4px;
+  color: #db481f;
+}
+/* line 229, ../sass/layout.scss */
+.body .recipes .recipe .wrapper {
+  height: 46px;
+  margin-bottom: 14px;
+}
+/* line 233, ../sass/layout.scss */
+.body .recipes .recipe .wrapper div {
+  background-size: 32px 32px;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+/* line 242, ../sass/layout.scss */
+.body .recipes .recipe .wrapper div p {
+  position: relative;
+  top: 68%;
+  text-align: center;
+}
+/* line 249, ../sass/layout.scss */
+.body .recipes .recipe .wrapper .iIcon {
+  background-image: url("../images/basket.png");
+}
+/* line 252, ../sass/layout.scss */
+.body .recipes .recipe .wrapper .pIcon {
+  background-image: url("../images/pot-01.png");
+  margin: 0 5%;
+}
+/* line 256, ../sass/layout.scss */
+.body .recipes .recipe .wrapper .cIcon {
+  background-image: url("../images/time.png");
 }
 
 /* MEDIA QUERIES
@@ -287,7 +352,7 @@ header button {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   /* add code here */
-  /* line 243, ../sass/layout.scss */
+  /* line 285, ../sass/layout.scss */
   header h2 {
     font-size: 28px;
   }
