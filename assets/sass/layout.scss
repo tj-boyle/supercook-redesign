@@ -53,7 +53,6 @@ button:hover{
     border: none;
     color: white;
     text-shadow: none !important;
-
 }
 
 
@@ -85,7 +84,6 @@ button {
     margin-top: 7px;
     font-size: 14px;
 }
-
 button:hover {
     background: $orange-border;
 }
@@ -129,7 +127,7 @@ header {
     }
 }
 
-.body {
+main {
     position: relative;
     top: 105px;
     z-index: 0;
@@ -154,6 +152,14 @@ header {
             background-color: $grey;
             width: 100%;
             margin: 0;
+        
+        }
+        input[type="range"]::-webkit-slider-thumb{
+            // -webkit-appearance: none;
+            @include appearance(none);
+            background-color: $grey-border;
+            width: 7px;
+            height: 20px;
         }
         
         ul{
@@ -169,7 +175,6 @@ header {
             white-space: nowrap;
             overflow: hidden;
         }
-        
         li:before {
             // content: url("../images/x.png");
             content: "x";
@@ -194,7 +199,6 @@ header {
             background: $grey-border;
             @include box-shadow($grey-butt-border 0px -3px 2px 0px inset);
         }
-
         button:hover{
             background: $grey-butt-border;
         }
@@ -226,6 +230,7 @@ header {
                 top: -4px;
                 color: $orange-border;
             }
+
             .wrapper{ 
                 height: 46px;
                 margin-bottom: 14px;
