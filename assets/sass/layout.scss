@@ -54,7 +54,9 @@ button:hover{
     color: white;
     text-shadow: none !important;
 }
-
+button:focus{
+    outline: none;
+}
 
 /* SITE STYLES
  * ------------------------------------------------ */
@@ -77,15 +79,12 @@ body {
 
 button {
     font-weight: 400;
-    @include border-radius(4px);
+    @include border-radius(6px);
     color: white;
     padding: 0 14px;
     margin-left: 0px;
     margin-top: 7px;
     font-size: 14px;
-}
-button:hover {
-    background: $orange-border;
 }
 
 header {
@@ -125,6 +124,13 @@ header {
         @include box-shadow($orange-border 0px -3px 2px 0px inset);
         
     }
+    button:hover {
+        background: $orange-hover;
+    }
+    button:active{
+        background: $orange-border;
+    }
+
 }
 
 main {
@@ -134,7 +140,7 @@ main {
     
     .card{
         background-color: white;
-        @include border-radius(4px);
+        @include border-radius(6px);
         border-bottom: 3px solid #db481f;
     } 
 
@@ -218,17 +224,22 @@ main {
         margin-top: 14px;
 
         .recipe{
-            margin-bottom: 14px;
+            margin-bottom: 7px;
             
             img{
-                @include border-top-radius(4px);
+                @include border-top-radius(6px);
             }
 
             h6{
                 position: relative;
+                display: inline-block;
                 padding-left: 7px;
                 top: -4px;
                 color: $orange-border;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
 
             .wrapper{ 

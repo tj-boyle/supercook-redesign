@@ -104,39 +104,44 @@ button:hover {
   text-shadow: none !important;
 }
 
+/* line 57, ../sass/layout.scss */
+button:focus {
+  outline: none;
+}
+
 /* SITE STYLES
  * ------------------------------------------------ */
-/* line 61, ../sass/layout.scss */
+/* line 63, ../sass/layout.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 65, ../sass/layout.scss */
+/* line 67, ../sass/layout.scss */
 body {
   background-color: #EFEFEF;
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 70, ../sass/layout.scss */
+/* line 72, ../sass/layout.scss */
 .left {
   float: left !important;
 }
 
-/* line 74, ../sass/layout.scss */
+/* line 76, ../sass/layout.scss */
 .right {
   float: right !important;
 }
 
-/* line 78, ../sass/layout.scss */
+/* line 80, ../sass/layout.scss */
 button {
   font-weight: 400;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   color: white;
   padding: 0 14px;
   margin-left: 0px;
@@ -144,12 +149,7 @@ button {
   font-size: 14px;
 }
 
-/* line 87, ../sass/layout.scss */
-button:hover {
-  background: #db481f;
-}
-
-/* line 91, ../sass/layout.scss */
+/* line 90, ../sass/layout.scss */
 header {
   position: fixed;
   width: 100%;
@@ -158,12 +158,12 @@ header {
   height: 77px;
   z-index: 1;
 }
-/* line 99, ../sass/layout.scss */
+/* line 98, ../sass/layout.scss */
 header .container {
   position: relative;
   padding-top: 14px;
 }
-/* line 105, ../sass/layout.scss */
+/* line 104, ../sass/layout.scss */
 header h2 {
   display: inline;
   position: relative;
@@ -172,50 +172,58 @@ header h2 {
   top: 4px;
   font-family: "Open Sans", sans-serif !important;
 }
-/* line 114, ../sass/layout.scss */
+/* line 113, ../sass/layout.scss */
 header span {
   font-weight: 400;
 }
-/* line 118, ../sass/layout.scss */
+/* line 117, ../sass/layout.scss */
 header .button-wrapper {
   text-align: right;
 }
-/* line 122, ../sass/layout.scss */
+/* line 121, ../sass/layout.scss */
 header button {
   height: 35px;
-  background: #e35920;
+  background: #f7682d;
   -webkit-box-shadow: #db481f 0px -3px 2px 0px inset;
   -moz-box-shadow: #db481f 0px -3px 2px 0px inset;
   box-shadow: #db481f 0px -3px 2px 0px inset;
 }
-
+/* line 127, ../sass/layout.scss */
+header button:hover {
+  background: #fc6121;
+}
 /* line 130, ../sass/layout.scss */
+header button:active {
+  background: #db481f;
+}
+
+/* line 136, ../sass/layout.scss */
 main {
   position: relative;
   top: 105px;
   z-index: 0;
 }
-/* line 135, ../sass/layout.scss */
+/* line 141, ../sass/layout.scss */
 main .card {
   background-color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   border-bottom: 3px solid #db481f;
 }
-/* line 141, ../sass/layout.scss */
+/* line 147, ../sass/layout.scss */
 main aside {
   padding: 7px;
 }
-/* line 144, ../sass/layout.scss */
+/* line 150, ../sass/layout.scss */
 main aside .form-border {
   padding-bottom: 7px;
   margin-bottom: 7px;
   border-bottom: 1px solid grey;
 }
-/* line 150, ../sass/layout.scss */
+/* line 156, ../sass/layout.scss */
 main aside input {
   -webkit-box-shadow: #93a29e 1px 1px 2px 0px inset;
   -moz-box-shadow: #93a29e 1px 1px 2px 0px inset;
@@ -224,7 +232,7 @@ main aside input {
   width: 100%;
   margin: 0;
 }
-/* line 157, ../sass/layout.scss */
+/* line 163, ../sass/layout.scss */
 main aside input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -233,12 +241,12 @@ main aside input[type="range"]::-webkit-slider-thumb {
   width: 7px;
   height: 20px;
 }
-/* line 165, ../sass/layout.scss */
+/* line 171, ../sass/layout.scss */
 main aside ul {
   padding-left: 7px;
   padding-right: 7px;
 }
-/* line 170, ../sass/layout.scss */
+/* line 176, ../sass/layout.scss */
 main aside li {
   margin: 0 0 7px;
   padding-left: 7px;
@@ -247,22 +255,22 @@ main aside li {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 178, ../sass/layout.scss */
+/* line 184, ../sass/layout.scss */
 main aside li:before {
   content: "x";
-  color: #e35920;
+  color: #f7682d;
   position: relative;
   font-weight: 600;
   left: -7px;
 }
-/* line 187, ../sass/layout.scss */
+/* line 193, ../sass/layout.scss */
 main aside a {
   color: #0022bb;
   display: block;
   width: 100%;
   text-align: center;
 }
-/* line 197, ../sass/layout.scss */
+/* line 203, ../sass/layout.scss */
 main .meal button {
   height: 28px;
   background: #93a29e;
@@ -270,51 +278,56 @@ main .meal button {
   -moz-box-shadow: #798988 0px -3px 2px 0px inset;
   box-shadow: #798988 0px -3px 2px 0px inset;
 }
-/* line 202, ../sass/layout.scss */
+/* line 208, ../sass/layout.scss */
 main .meal button:hover {
   background: #798988;
 }
-/* line 206, ../sass/layout.scss */
+/* line 212, ../sass/layout.scss */
 main .meal button.current {
   background: #84d171;
   -webkit-box-shadow: #6cc85f 0px -3px 2px 0px inset;
   -moz-box-shadow: #6cc85f 0px -3px 2px 0px inset;
   box-shadow: #6cc85f 0px -3px 2px 0px inset;
 }
-/* line 211, ../sass/layout.scss */
+/* line 217, ../sass/layout.scss */
 main .meal button.current:hover {
   background: #6cc85f;
 }
-/* line 217, ../sass/layout.scss */
+/* line 223, ../sass/layout.scss */
 main .recipes {
   margin-top: 14px;
 }
-/* line 220, ../sass/layout.scss */
+/* line 226, ../sass/layout.scss */
 main .recipes .recipe {
-  margin-bottom: 14px;
+  margin-bottom: 7px;
 }
-/* line 223, ../sass/layout.scss */
+/* line 229, ../sass/layout.scss */
 main .recipes .recipe img {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
 }
-/* line 227, ../sass/layout.scss */
+/* line 233, ../sass/layout.scss */
 main .recipes .recipe h6 {
   position: relative;
+  display: inline-block;
   padding-left: 7px;
   top: -4px;
   color: #db481f;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-/* line 234, ../sass/layout.scss */
+/* line 245, ../sass/layout.scss */
 main .recipes .recipe .wrapper {
   height: 46px;
   margin-bottom: 14px;
 }
-/* line 238, ../sass/layout.scss */
+/* line 249, ../sass/layout.scss */
 main .recipes .recipe .wrapper div {
   background-size: 32px 32px;
   background-position: 50% 0%;
@@ -324,22 +337,22 @@ main .recipes .recipe .wrapper div {
   width: 30%;
   height: 100%;
 }
-/* line 247, ../sass/layout.scss */
+/* line 258, ../sass/layout.scss */
 main .recipes .recipe .wrapper div p {
   position: relative;
   top: 68%;
   text-align: center;
 }
-/* line 254, ../sass/layout.scss */
+/* line 265, ../sass/layout.scss */
 main .recipes .recipe .wrapper .iIcon {
   background-image: url("../images/basket.png");
 }
-/* line 257, ../sass/layout.scss */
+/* line 268, ../sass/layout.scss */
 main .recipes .recipe .wrapper .pIcon {
   background-image: url("../images/pot-01.png");
   margin: 0 5%;
 }
-/* line 261, ../sass/layout.scss */
+/* line 272, ../sass/layout.scss */
 main .recipes .recipe .wrapper .cIcon {
   background-image: url("../images/time.png");
 }
@@ -361,7 +374,7 @@ main .recipes .recipe .wrapper .cIcon {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   /* add code here */
-  /* line 290, ../sass/layout.scss */
+  /* line 301, ../sass/layout.scss */
   header h2 {
     font-size: 28px;
   }
